@@ -5,7 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+              primeFont: ["Nunito"]
+        },
+        colors:{
+          primeDark: "#141516",
+          primeRed:"#FF0000"
+        }
+    },
   },
   plugins: [],
 }
