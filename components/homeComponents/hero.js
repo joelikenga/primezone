@@ -1,14 +1,180 @@
-const Hero = () => {
-    return(
-        < div className=" w-full h-[80vh] bg-primeDark bg-cover bg-center flex justify-start item-start ">
-            <div className=" pl-40 ">            
-                    <h1 className="break-all text-4xl font-medium">Primezone </h1>
-                    <p className="mt-4 text-">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                    {/* <button className="text-lg mt-5 mx-4  bg-gray-200 rounded-full shaddow  px-8 py-3">Shop Now !</button>
-                    <button className="text-lg mt-5 mx-4  bg-gray-200 rounded-full shaddow  px-8 py-3">Shop Now !</button> */}
-         </div>
+import Image from "next/image";
+import {motion} from "framer-motion";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 
-        </div >
+const Hero = () => {
+
+    const heroScrollLeftVariants = {
+        start:{},
+        stop:{
+            x:-3000,
+            transition : {
+                duration:70,
+                repeat: Infinity,
+                repeatType: "mirror",
+                type:"tween"
+            }
+        }
+    }
+    const heroScrollRightVariants = {
+        start:{x:-3000},
+        stop:{
+            x:0,
+            transition : {
+                duration:70,
+                repeat: Infinity,
+                repeatType: "mirror",
+                type:"tween"
+            }
+        }
+    }
+
+    const heroImages =  [
+        {Image: "/passport-3.jpg", width: "220", height:"300"},
+        {Image: "/passport-5.jpg", width: "220", height:"300"},
+        {Image: "/passport-4.jpg", width: "220", height:"300"},
+        {Image: "/passport-2.jpg", width: "220", height:"300"},
+        {Image: "/passport-1.jpg", width: "220", height:"300"},
+        {Image: "/passport-4.jpg", width: "220", height:"300"},
+        {Image: "/passport-3.jpg", width: "220", height:"300"},
+        {Image: "/passport-3.jpg", width: "220", height:"300"},
+        {Image: "/passport-5.jpg", width: "220", height:"300"},
+        {Image: "/passport-4.jpg", width: "220", height:"300"},
+        {Image: "/passport-2.jpg", width: "220", height:"300"},
+        {Image: "/passport-1.jpg", width: "220", height:"300"},
+        {Image: "/passport-4.jpg", width: "220", height:"300"},
+        {Image: "/passport-3.jpg", width: "220", height:"300"},
+        {Image: "/passport-3.jpg", width: "220", height:"300"},
+        {Image: "/passport-5.jpg", width: "220", height:"300"},
+        {Image: "/passport-4.jpg", width: "220", height:"300"},
+        {Image: "/passport-2.jpg", width: "220", height:"300"},
+        {Image: "/passport-1.jpg", width: "220", height:"300"},
+        {Image: "/passport-4.jpg", width: "220", height:"300"},
+        {Image: "/passport-3.jpg", width: "220", height:"300"},
+    ]
+    return(
+        <div className="text-prime-font bg-primeDark  h-screen overflow-hidden">
+            < div className="grid m-auto  grid-rows-4 gap-2  relative">
+
+                <div className="absolute z-20 bg-[rgba(0,0,0,0.7)] w-screen h-full ">
+                            <div className="relative">
+
+                                    <div className="absolute text-center top-40 sm:top-72 w-screen px-10">
+                                        <div className="sm:mx-20">
+                                            <h1 className="text-4xl  md:text-5xl md:m-0 font-medium text-white">Primezone simplifies shopping to the easiest means of getting what you want...</h1>
+                                        </div>
+                                            <div className= " flex-row text-white font-semibold text-2xl sm:flex sm:justify-between  text-center container mx-auto mt-16  sm:mt-60">
+                                                    <div className="my-8"> Discount</div>
+                                                    <div className="my-8"><FontAwesomeIcon icon={faTruckFast}/>Delivery</div>
+                                                    <div className="my-8">Quality</div> 
+                                            </div>
+                                    </div>
+
+                            </div>
+                </div>
+
+                {/* <div className="absolute z-40 fixed bg-primeRed h-[100%] w-2/5 h-full">
+                        hfhfh
+                </div> */}
+
+                {/*  */}
+
+
+                            <div   className="flex flex-nowrap gap-5  overflow-hidden">
+                                    {heroImages.map((images,index) => {
+                                        return(
+                                            <motion.div  
+                                                variants={heroScrollLeftVariants}
+                                                initial="start"
+                                                animate="stop"
+                                                 key={index } 
+                                                 className=" overflow-hidden flex-none shadow ">
+
+                                                    <Image 
+                                                        src={images.Image} 
+                                                        className="  rounded-lg object-cover"
+                                                         width={images.width } 
+                                                         height={images.height}
+                                                     />
+
+                                             </motion.div>
+                                        )                              
+                                    })}
+                            </div>
+
+                            <div   className="flex flex-nowrap gap-5  overflow-hidden">
+                                    {heroImages.map((images,index) => {
+                                        return(
+                                            <motion.div  
+                                                variants={heroScrollRightVariants}
+                                                initial="start"
+                                                animate="stop"
+                                                 key={index } 
+                                                 className=" flex-none shadow ">
+
+                                                    <Image 
+                                                        src={images.Image} 
+                                                        className=" rounded-lg object-cover"
+                                                         width={images.width } 
+                                                         height={images.height}
+                                                     />
+
+                                             </motion.div>
+                                        )                              
+                                    })}
+                            </div>
+
+                            <div   className="flex flex-nowrap gap-5  overflow-hidden">
+                                    {heroImages.map((images,index) => {
+                                        return(
+                                            <motion.div  
+                                                variants={heroScrollLeftVariants}
+                                                initial="start"
+                                                animate="stop"
+                                                 key={index } 
+                                                 className=" flex-none shadow ">
+
+                                                    <Image 
+                                                        src={images.Image} 
+                                                        className=" rounded-lg object-cover"
+                                                         width={images.width } 
+                                                         height={images.height}
+                                                     />
+
+                                             </motion.div>
+                                        )                              
+                                    })}
+                            </div>
+
+                            <div   className="flex flex-nowrap gap-5  overflow-hidden">
+                                    {heroImages.map((images,index) => {
+                                        return(
+                                            <motion.div  
+                                                variants={heroScrollRightVariants}
+                                                initial="start"
+                                                animate="stop"
+                                                 key={index } 
+                                                 className=" flex-none shadow ">
+
+                                                    <Image 
+                                                        src={images.Image} 
+                                                        className=" rounded-lg object-cover"
+                                                         width={images.width } 
+                                                         height={images.height}
+                                                     />
+
+                                             </motion.div>
+                                        )                              
+                                    })}
+                            </div>
+
+
+
+                    {/*  */}
+                 
+            </div >
+  </div>
     )
 }
 export default Hero;

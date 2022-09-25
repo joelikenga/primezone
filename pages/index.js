@@ -3,6 +3,7 @@ import Discount from '../components/homeComponents/discount';
 import Hero from '../components/homeComponents/hero';
 import Featured from '../components/homeComponents/featured';
 import Testimonial from '../components/homeComponents/testimonial';
+import HomeNav from '../components/homeComponents/homeNav';
 const Home = () => {
     return ( 
         <>
@@ -11,6 +12,7 @@ const Home = () => {
             </header>
 
             <div className="">
+                    <HomeNav />
                     <Hero />
                     <Discount />
                     <Featured />
