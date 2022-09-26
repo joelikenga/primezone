@@ -52,7 +52,7 @@ const featureContent =[
                                                                     <div className="hiddenScroll  justify-items-center mx-auto container mt-6 flex flex-nowrap  overflow-x-scroll gap-2 snap-x">
                                                                             {content.tabContents.map((tabCards, index) =>(
 
-                                                                                        <Link key={index} href="/" className="">
+                                                                                        <Link key={index} href="" className="">
                                                                                                     <div  className=" scale-95  snap-center snap-mandatory overflow-hidden flex-none shadow max-w-[20rem] bg-white rounded hover:scale-100 hover:duration-300">
                                                                                                    
                                                                                                             <Image 

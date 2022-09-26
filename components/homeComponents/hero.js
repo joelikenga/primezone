@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
+// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+// import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = () => {
 
@@ -66,7 +66,7 @@ const Hero = () => {
                                         </div>
                                             <div className= " flex-row text-white font-semibold text-2xl sm:flex sm:justify-between  text-center container mx-auto mt-16  sm:mt-60">
                                                     <div className="my-8"> Discount</div>
-                                                    <div className="my-8"><FontAwesomeIcon icon={faTruckFast}/>Delivery</div>
+                                                    <div className="my-8">Delivery</div>
                                                     <div className="my-8">Quality</div> 
                                             </div>
                                     </div>
