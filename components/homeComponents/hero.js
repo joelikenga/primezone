@@ -69,7 +69,7 @@ const Hero = () => {
                                                 className="text-4xl  md:text-5xl md:m-0 font-medium text-white"
                                                 >Primezone simplifies shopping to the easiest means of getting what you want...</motion.h1>
                                         </div>
-                                            <div 
+                                            <motion.div 
                                                 initial={{opacity:0}}
                                                 animate={{opacity:1,}}
                                                 transition={{delay:1, duration:1}}
@@ -78,7 +78,7 @@ const Hero = () => {
                                                     <div className="my-8"> Discount</div>
                                                     <div className="my-8">Delivery</div>
                                                     <div className="my-8">Quality</div> 
-                                            </div>
+                                            </motion.div>
                                     </div>
 
                             </div>
