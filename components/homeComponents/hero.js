@@ -54,7 +54,7 @@ const Hero = () => {
         {Image: "/passport-3.jpg", width: "220", height:"300"},
     ]
     return(
-        <div className="text-prime-font bg-primeDark  h-screen overflow-hidden">
+        <div className="text-prime-font bg-primeDark  h-[58rem] overflow-hidden">
             < div className="grid m-auto  grid-rows-4 gap-2  relative">
 
                 <div className="absolute z-20 bg-[rgba(0,0,0,0.7)] w-screen h-full ">
@@ -62,9 +62,19 @@ const Hero = () => {
 
                                     <div className="absolute text-center top-40 sm:top-72 w-screen px-10">
                                         <div className="sm:mx-20">
-                                            <h1 className="text-4xl  md:text-5xl md:m-0 font-medium text-white">Primezone simplifies shopping to the easiest means of getting what you want...</h1>
+                                            <motion.h1 
+                                                initial={{opacity:0}}
+                                                animate={{opacity:1,}}
+                                                transition={{delay:1, duration:0.5}}
+                                                className="text-4xl  md:text-5xl md:m-0 font-medium text-white"
+                                                >Primezone simplifies shopping to the easiest means of getting what you want...</motion.h1>
                                         </div>
-                                            <div className= " flex-row text-white font-semibold text-2xl sm:flex sm:justify-between  text-center container mx-auto mt-16  sm:mt-60">
+                                            <div 
+                                                initial={{opacity:0}}
+                                                animate={{opacity:1,}}
+                                                transition={{delay:1, duration:1}}
+                                                className= " flex-row text-white font-semibold text-2xl sm:flex sm:justify-between  text-center container mx-auto mt-16  sm:mt-60"
+                                                >
                                                     <div className="my-8"> Discount</div>
                                                     <div className="my-8">Delivery</div>
                                                     <div className="my-8">Quality</div> 
@@ -147,7 +157,7 @@ const Hero = () => {
                                     })}
                             </div>
 
-                            <div   className="flex flex-nowrap gap-5  overflow-hidden">
+                            {/* <div   className="flex flex-nowrap gap-5  overflow-hidden">
                                     {heroImages.map((images,index) => {
                                         return(
                                             <motion.div  
@@ -167,7 +177,7 @@ const Hero = () => {
                                              </motion.div>
                                         )                              
                                     })}
-                            </div>
+                            </div> */}
 
 
 
