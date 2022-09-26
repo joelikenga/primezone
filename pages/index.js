@@ -26,7 +26,7 @@ const Home = () => {
             </header>
             {
                 loading ? 
-                    <div className="w-screen h-screen bg-black flex text-primeRed text-5xl text-bold justify-center py-[50vh]">Primezone</div>
+                    <div className="w-screen h-screen bg-black flex text-primeRed text-5xl text-bold justify-center py-[45vh]">Primezone</div>
                     :
 
                 <div className="">
