@@ -7,12 +7,12 @@ const discountCard = [
     { pbrand: "Bimes", pname:"Orange Juice", image:"/istockphoto-1027015824-170667a.jpg",newPrice:150, oldPrice:200},
     { pbrand: "Bimes", pname:"Egg Juice", image:"/istockphoto-1055554214-170667a.jpg",newPrice:150, oldPrice:200},
     { pbrand: "Bimes", pname:"Goat Juice", image:"/istockphoto-1216828053-612x612.jpg",newPrice:150, oldPrice:200},
-    { pbrand: "Bimes", pname:"Goat Juice", image:"/istockphoto-1216828053-612x612.jpg",newPrice:150, oldPrice:200},
+    // { pbrand: "Bimes", pname:"Goat Juice", image:"/istockphoto-1216828053-612x612.jpg",newPrice:150, oldPrice:200},
 ]
 
 const Discount = () => {
     return ( 
-        <div className="    overflow-x-visible px-auto py-10   font-primeFont grid grid-cols-1 gap-3  md:grid-cols-4">
+        <div className="    overflow-x-visible px-auto py-10   font-primeFont grid grid-cols-1 gap-3  md:grid-cols-3">
 
                 {discountCard.map((items, index) => (
                                     <Link href={"/"} key={index} className=" cursor-pointer">

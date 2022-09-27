@@ -19,7 +19,7 @@ const HomeNav = () => {
         initial={{opacity:0}}
         animate={{opacity:1,}}
         transition={{delay:0.3, duration:0.5}}
-        className={"flex sm:justify-between justify-center sm:px-64    w-screen  mt-16  font-primeFont  fixed z-50 "}>
+        className={"flex sm:justify-between justify-center sm:px-64  md:px-32   w-screen  sm:mt-14 mt-8  font-primeFont absolute sm:fixed z-50 "}>
 
                 {/* navigations */}
                 <div className="hidden sm:block bg-black text-gray-200 px-4 py-3 font-black text-xl rounded-full text-center">

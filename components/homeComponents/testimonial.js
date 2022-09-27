@@ -1,4 +1,4 @@
-import { faQuoteLeftAlt, faQuoteRightAlt }  from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeftAlt, faQuoteRightAlt,faChevronLeft,faChevronRight }  from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
@@ -13,38 +13,31 @@ const Testimonial = () => {
     ]
 
     return ( 
-            <>
-                {/* <div className="bg-cover bg-center w-full bg-no-repeat font-primeFont bg-primeDark mt-8  ">
-                        <div className="flex justify-center">
-                            <h2 className="text-5xl font-bold  mt-8 text-white">Testimonial</h2>
-                        </div>
-                        <div className=" container  mx-auto ">
-                    <div className=" mt-10 flex flex-nowrap gap-2 overflow-x-scroll">
-                            {customerReport.map((testimony, index) => (
-                               
-                                <div  key={index} className=" bg-black flex flex-none  scale-95 max-w-lg border-l-8 rounded   container mx-auto  overflow-hidden   border-primeRed">
-                                <div className=" flex border-y-[1px] border-r-[1px]  border-gray-400">
-                                            <div className="px-5 text-start md:block  my-6">
-                                                 <p className="text-white text-md font-medium">
-                                                 “{testimony.report}”
-                                                    </p>
-                                                    <div className="">
-                                                            <div class="capitalize text-primeRed font-bold">{testimony.name}</div>
-                                                            <div class="capitalize text-slate-500">
-                                                                {testimony.status}, {testimony.location}
-                                                            </div>
-                                                    </div>
-                                            </div>
-                                            <Image className="h-auto w-auto object-cover " layout="" src={testimony.image} alt="primezone"  width="550" height="200"/>
-                                   </div>
-                                   </div> 
-                            ))}
-                           </div>
+            
+                <div className="bg-cover bg-center  bg-no-repeat font-primeFont bg-[url('/wallpaper-2.jpg')]  py-5 z-0">
 
-                    </div>
- 
-            </div> */}
-            </>
+                    {/* <div className="bg-black absolute w-full h-screen text-white z-10">jjhhh</div> */}
+
+                        <div className="flex justify-center py-3">
+                            <h2 className="text-3xl sm:text-4xl font-bold uppercase first-letter:text-primeRed first-letter:text-6xl  text-white">Testimonial</h2>
+                        </div>
+
+                        <div className="flex justify-center mt-2 container mx-auto">
+                                <h2 className="text-sm sm:text-lg font-bold   text-black text-center">
+                                    Eiusmod esse enim velit ullamco dolore aliquip. 
+                                    Culpa ex quis laborum amet magna eiusmod proident excepteur et.
+                                    Ea nulla nisi aliquip reprehenderit.laborum mollit adipisicing eu ex voluptate.
+                                    non veniam elit aliquip deserunt. Ea ut nulla mollit officia pariatur.
+                                        Ipsum amet id incididunt pariatur dolor nostrud aliquip qui ad non nostrud elit laborum.
+                                        Sit aliquip eu enim consequat cupidatat mollit.
+                                </h2>
+                        </div>
+
+                        <div className=" flex justify-center pt-7">
+                                <button className="py-2 px-10 rounded-full bg-gray-300 text-xl text-black font-bold">View</button>
+                        </div>
+            </div>
+          
      );
 }
  
