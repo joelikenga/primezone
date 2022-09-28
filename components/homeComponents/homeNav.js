@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping, faGripHorizontal, faChevronUp  } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping, faGripHorizontal, faEquals} from "@fortawesome/free-solid-svg-icons";
 import {motion} from "framer-motion";
-import Image from "next/image";
-import { BsChevronDoubleUp } from "react-icons/bs";
+import { TiEquals } from "react-icons/ti";
+
 
 
 const HomeNav = () => {
@@ -54,16 +53,9 @@ const HomeNav = () => {
                 <div className=" flex justify-center container text-center px-6 font-black text-primeRed">
 
                         <motion.span 
-                        // initial={{y:10}}
-                        // animate={{y:3}}
-                        // transition={{
-                        //     duration:1, 
-                        //     repeat: "Infinity",
-                        //     repeatType: "reverse",
-                        //     duration: 1
-                        // }}
-                        className="font-black text-3xl pt-1">
-                            <FontAwesomeIcon icon={faBarsStaggered} />
+                        className="font-black text-3xl mt-3">
+                               <FontAwesomeIcon className=" text-primeRed" icon={faEquals} />
+                               {/* <TiEquals /> */}
                          </motion.span>
 
                 </div>
