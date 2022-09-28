@@ -55,7 +55,7 @@ const HomeNav = () => {
 
                         <motion.span 
                         initial={{y:10}}
-                        animate={{y:0}}
+                        animate={{y:3}}
                         transition={{
                             duration:1, 
                             repeat: "Infinity",
