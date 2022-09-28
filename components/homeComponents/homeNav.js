@@ -50,17 +50,17 @@ const HomeNav = () => {
                     initial={{opacity:0}}
                     animate={{opacity:1,}}
                     transition={{delay:0.5, duration:0.5}}
-            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,0.9)] h-10  w-full container   rounded-tr-xl rounded-tl-xl -bottom-0 mx-auto">
+            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,0.9)] h-10  w-full container   rounded-tr rounded-tl -bottom-2 mx-auto">
                 <div className=" flex justify-center container text-center px-6 text-3xl font-black text-primeRed">
 
                         <motion.span 
-                        initial={{y:15}}
+                        initial={{y:10}}
                         animate={{y:0}}
                         transition={{
                             duration:1, 
                             repeat: "Infinity",
                             repeatType: "reverse",
-                            duration: 2
+                            duration: 1
                         }}
                         className="font-black text-4xl ">
                             <BsChevronDoubleUp />
