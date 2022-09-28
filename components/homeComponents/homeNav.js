@@ -26,8 +26,8 @@ const HomeNav = () => {
                  backgroundColor:"#ff0000"
             },
             closed:{
-                width:"100vw", 
-                height:"100vh", 
+                width:"0vw", 
+                height:"0vh", 
                 borderRadius:"0px",
                  bottom:"0px",
                  marginLeft:"0px",
@@ -71,8 +71,8 @@ const HomeNav = () => {
                     whileTap={clickApp ? "open" : "closed"}
                     className="sm:hidden  fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container ml-2  rounded-full bottom-10 mx-auto">
 
-            <motion.footer 
-            
+            <footer 
+            // onClick={SetclickApp(!clickApp)}
             className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4.5rem] h-[4.5rem] container ml-2  rounded-full bottom-10 mx-auto">
 
                 <div className=" flex justify-center container text-center px-6 font-black text-primeRed">
@@ -84,7 +84,7 @@ const HomeNav = () => {
 
                 </div>
 
-            </motion.footer>
+            </footer>
 
             </motion.div>
 
