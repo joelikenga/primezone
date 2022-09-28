@@ -49,11 +49,11 @@ const HomeNav = () => {
                     initial={{opacity:0}}
                     animate={{opacity:1,}}
                     transition={{delay:0.5, duration:0.5}}
-            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4rem] h-[4rem] container ml-2  rounded-full bottom-10 mx-auto">
+            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4.5rem] h-[4.5rem] container ml-2  rounded-full bottom-10 mx-auto">
                 <div className=" flex justify-center container text-center px-6 font-black text-primeRed">
 
                         <motion.span 
-                        className="font-black text-3xl mt-3">
+                        className="font-black text-3xl mt-4">
                                <FontAwesomeIcon className=" text-primeRed" icon={faEquals} />
                                {/* <TiEquals /> */}
                          </motion.span>
