@@ -16,6 +16,7 @@ const Home = () => {
         transition:{
             delay:1,
             duration:5,
+             repeat: "Infinity",
             repeatType: "reverse",
             type:"spring",
             stiffness:80,
@@ -28,6 +29,7 @@ const Home = () => {
         transition:{
             delay:1,
             duration:5,
+            repeat: "Infinity",
             repeatType: "reverse",
             type:"spring",
             stiffness:80,
