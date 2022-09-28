@@ -28,8 +28,7 @@ const Testimonial = () => {
                                     Culpa ex quis laborum amet magna eiusmod proident excepteur et.
                                     Ea nulla nisi aliquip reprehenderit.laborum mollit adipisicing eu ex voluptate.
                                     non veniam elit aliquip deserunt. Ea ut nulla mollit officia pariatur.
-                                        Ipsum amet id incididunt pariatur dolor nostrud aliquip qui ad non nostrud elit laborum.
-                                        Sit aliquip eu enim consequat cupidatat mollit.
+
                                 </h2>
                         </div>
 

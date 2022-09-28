@@ -6,29 +6,31 @@ import Testimonial from '../components/homeComponents/testimonial';
 import HomeNav from '../components/homeComponents/homeNav';
 import { useEffect, useState } from 'react';
 import {motion} from "framer-motion";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import Appbar from '../components/homeComponents/appBar';
+
 const Home = () => {
 
     const  loadup = {
-        start:{y:-50, color:"gray"},
-        stop:{y:0, color:"red",
+        start:{y:-100, opacity:0},
+        stop:{y:0, opacity:1,
         transition:{
-            duration:3,
+            delay:1,
+            duration:5,
             repeatType: "reverse",
             type:"spring",
-            stiffness:150,
+            stiffness:80,
         }
     },
     }
     const  loaddown = {
-        start:{y:50, color:"gray"},
-        stop:{y:0, color:"red",
+        start:{y:100, opacity:0},
+        stop:{y:0,opacity:1,
         transition:{
-            duration:3,
+            delay:1,
+            duration:5,
             repeatType: "reverse",
             type:"spring",
-            stiffness:150,
+            stiffness:80,
 
 
         }
@@ -44,7 +46,7 @@ const Home = () => {
         
         setTimeout(() => {
             setLoading(false)
-        }, 6000);
+        }, 4000);
     },[])
 
     return ( 
@@ -120,7 +122,7 @@ const Home = () => {
                     </motion.div>
                     :
 
-                <div className="">
+                <div className="relative">
                         <HomeNav />
                         <Hero />
                         <Discount />
