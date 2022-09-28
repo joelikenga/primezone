@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const HomeNav = () => {
 
-    const [clickApp, SetclickApp] = useState(true);
+    const [clickApp, SetclickApp] = useState(false);
 
     const navigation =  [
         {name: "Home", href:"/", title: "Home"},
@@ -36,7 +36,9 @@ const HomeNav = () => {
         }
 
     return ( 
-        <>
+        <motion.div   initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{delay:0.3, duration:0.5}}>
         <motion.nav 
         initial={{opacity:0}}
         animate={{opacity:1}}
@@ -65,10 +67,9 @@ const HomeNav = () => {
 
         {/* appbar */}
 <motion.div 
-                    layout
                     variants={appMenuVariant}
                     transition={{duration:0.5}}
-                    whileTap={clickApp ? "open" : "closed"}
+                    whileHover={SetclickApp ? "open" : "closed"}
                     className="sm:hidden  fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container ml-2  rounded-full bottom-10 mx-auto">
 
             <footer 
@@ -88,7 +89,7 @@ const HomeNav = () => {
 
             </motion.div>
 
-        </>
+        </motion.div>
      );
 }
  
