@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping, faGripHorizontal  } from "@fortawesome/free-solid-svg-icons";
+import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping, faGripHorizontal, faChevronUp  } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import Image from "next/image";
@@ -50,14 +50,14 @@ const HomeNav = () => {
                     initial={{opacity:0}}
                     animate={{opacity:1,}}
                     transition={{delay:0.5, duration:0.5}}
-            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,0.8)]  w-full container   rounded-tr-xl rounded-tl-xl -bottom-0 mx-auto">
+            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,0.8)] h-10  w-full container   rounded-tr-xl rounded-tl-xl -bottom-0 mx-auto">
                 <div className=" flex justify-center container text-center px-6 text-3xl font-black text-primeRed">
                         {/* <div className="mt-1">
                                 <FontAwesomeIcon icon={faBarsStaggered} />
                         </div> */}
 
                         <span className="font-[900] w-">
-                            <MdHorizontalRule />
+                            <FontAwesomeIcon icon={faChevronUp} />
                          </span>
 {/* 
                          <div className="">
