@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping  } from "@fortawesome/free-solid-svg-icons";
+import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping, faGripHorizontal  } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import Image from "next/image";
+import { MdHorizontalRule } from "react-icons/md";
 
 
 const HomeNav = () => {
@@ -42,23 +43,26 @@ const HomeNav = () => {
                  <FontAwesomeIcon className={"px-5 text-2xl"} icon={faUserCircle} />
                 </div>
         </motion.nav>
+
+        {/* appbar */}
+
             <motion.footer 
                     initial={{opacity:0}}
                     animate={{opacity:1,}}
                     transition={{delay:0.5, duration:0.5}}
-            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,0.8)]  w-full container py-3  rounded-full bottom-5 mx-auto">
-                <div className=" flex justify-between container text-center px-6 text-3xl font-black text-primeRed">
-                        <div className="mt-1">
+            className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,0.8)]  w-full container   rounded-tr-xl rounded-tl-xl -bottom-2 mx-auto">
+                <div className=" flex justify-center container text-center px-6 text-3xl font-black text-primeRed">
+                        {/* <div className="mt-1">
                                 <FontAwesomeIcon icon={faBarsStaggered} />
-                        </div>
+                        </div> */}
 
-                        <div className="text-gray-300 text-4xl">
-                        <FontAwesomeIcon icon={faBasketShopping} />
-                         </div>
-
+                        <span className="font-[900] w-">
+                            <MdHorizontalRule />
+                         </span>
+{/* 
                          <div className="">
                          <Image className="rounded-full" src={"/passport-1.jpg"} width="40" height="40" alt="" />
-                        </div>
+                        </div> */}
 
                 </div>
 
