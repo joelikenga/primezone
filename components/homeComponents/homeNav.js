@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping, faGripHorizontal, faEquals} from "@fortawesome/free-solid-svg-icons";
+import {  faShoppingCart, faUserCircle, faBarsStaggered, faBasketShopping, faGripHorizontal, faEquals, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {motion} from "framer-motion";
-import { TiEquals } from "react-icons/ti";
-
+import { useState } from "react";
 
 
 const HomeNav = () => {
+
+    const [clickApp, SetclickApp] = useState(true);
 
     const navigation =  [
         {name: "Home", href:"/", title: "Home"},
@@ -15,13 +16,32 @@ const HomeNav = () => {
         {name:"Contacts", href:"/contact", title: "Contact"}
     ]
 
+        const appMenuVariant = {
+            open:{
+                width:"100vw", 
+                height:"100vh", 
+                borderRadius:"0px",
+                 bottom:"0px",
+                 marginLeft:"0px",
+                 backgroundColor:"#ff0000"
+            },
+            closed:{
+                width:"100vw", 
+                height:"100vh", 
+                borderRadius:"0px",
+                 bottom:"0px",
+                 marginLeft:"0px",
+                 backgroundColor:"rgba(0,0,0,0,)"
+            }
+        }
+
     return ( 
         <>
         <motion.nav 
         initial={{opacity:0}}
-        animate={{opacity:1,}}
+        animate={{opacity:1}}
         transition={{delay:0.3, duration:0.5}}
-        className={"flex sm:justify-between justify-center sm:px-64  md:px-32   w-screen  sm:mt-14 mt-8  font-primeFont absolute sm:fixed z-50 "}>
+        className="flex sm:justify-between justify-center sm:px-64  md:px-32   w-screen  sm:mt-14 mt-8  font-primeFont absolute sm:fixed z-50 ">
 
                 {/* navigations */}
                 <div className="hidden sm:block bg-black text-gray-200 px-4 py-3 font-black text-xl rounded-full text-center">
@@ -44,23 +64,30 @@ const HomeNav = () => {
         </motion.nav>
 
         {/* appbar */}
+<motion.div 
+                    layout
+                    variants={appMenuVariant}
+                    transition={{duration:0.5}}
+                    whileTap={clickApp ? "open" : "closed"}
+                    className="sm:hidden  fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container ml-2  rounded-full bottom-10 mx-auto">
 
             <motion.footer 
-                    initial={{opacity:0}}
-                    animate={{opacity:1,}}
-                    transition={{delay:0.5, duration:0.5}}
+            
             className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4.5rem] h-[4.5rem] container ml-2  rounded-full bottom-10 mx-auto">
+
                 <div className=" flex justify-center container text-center px-6 font-black text-primeRed">
 
                         <motion.span 
                         className="font-black text-3xl mt-[1.18rem]">
-                               <FontAwesomeIcon className=" text-primeRed" icon={faEquals} />
-                               {/* <TiEquals /> */}
+                               <FontAwesomeIcon className=" text-primeRed" icon={SetclickApp ? faTimes : faEquals} />
                          </motion.span>
 
                 </div>
 
             </motion.footer>
+
+            </motion.div>
+
         </>
      );
 }
