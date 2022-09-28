@@ -53,7 +53,7 @@ const HomeNav = () => {
                 <div className=" flex justify-center container text-center px-6 font-black text-primeRed">
 
                         <motion.span 
-                        className="font-black text-3xl mt-4">
+                        className="font-black text-3xl mt-[1.18rem]">
                                <FontAwesomeIcon className=" text-primeRed" icon={faEquals} />
                                {/* <TiEquals /> */}
                          </motion.span>
