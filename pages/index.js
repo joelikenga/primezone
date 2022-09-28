@@ -14,10 +14,7 @@ const Home = () => {
         start:{y:-100, opacity:0},
         stop:{y:0, opacity:1,
         transition:{
-            delay:1,
-            duration:5,
-             repeat: "Infinity",
-            repeatType: "reverse",
+            duration:4,
             type:"spring",
             stiffness:80,
         }
@@ -27,10 +24,7 @@ const Home = () => {
         start:{y:100, opacity:0},
         stop:{y:0,opacity:1,
         transition:{
-            delay:1,
-            duration:5,
-            repeat: "Infinity",
-            repeatType: "reverse",
+            duration:4,
             type:"spring",
             stiffness:80,
 
@@ -48,7 +42,7 @@ const Home = () => {
         
         setTimeout(() => {
             setLoading(false)
-        }, 4000);
+        }, 5000);
     },[])
 
     return ( 
