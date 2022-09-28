@@ -31,7 +31,7 @@ const HomeNav = () => {
                 borderRadius:"0px",
                  bottom:"0px",
                  marginLeft:"0px",
-                 backgroundColor:"rgba(0,0,0,0,)"
+
             }
         }
 
@@ -39,6 +39,8 @@ const HomeNav = () => {
         <motion.div   initial={{opacity:0}}
         animate={{opacity:1}}
         transition={{delay:0.3, duration:0.5}}>
+
+            {/* navbar */}
         <motion.nav 
         initial={{opacity:0}}
         animate={{opacity:1}}
@@ -69,18 +71,18 @@ const HomeNav = () => {
 <motion.div 
                     variants={appMenuVariant}
                     transition={{duration:0.5}}
-                    whileHover={SetclickApp ? "open" : "closed"}
-                    className="sm:hidden  fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container ml-2  rounded-full bottom-10 mx-auto">
+                    animate={clickApp ? "open" : "closed"}
+                    className="sm:hidden  fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container  rounded-full bottom-10 mx-auto">
 
             <footer 
-            // onClick={SetclickApp(!clickApp)}
+            onClick={()=>{SetclickApp(!clickApp)}}
             className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4.5rem] h-[4.5rem] container ml-2  rounded-full bottom-10 mx-auto">
 
                 <div className=" flex justify-center container text-center px-6 font-black text-primeRed">
 
                         <motion.span 
                         className="font-black text-3xl mt-[1.18rem]">
-                               <FontAwesomeIcon className=" text-primeRed" icon={SetclickApp ? faTimes : faEquals} />
+                               <FontAwesomeIcon className=" text-primeRed" icon={clickApp ? faTimes : faEquals} />
                          </motion.span>
 
                 </div>
