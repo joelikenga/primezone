@@ -23,7 +23,7 @@ const Testimonial = () => {
                         </div>
 
                         <div className="flex justify-center mt-2 container mx-auto">
-                                <h2 className="text-sm sm:text-lg font-bold   text-black text-center">
+                                <h2 className="text-sm sm:text-lg font-bold   text-white text-center">
                                     Eiusmod esse enim velit ullamco dolore aliquip. 
                                     Culpa ex quis laborum amet magna eiusmod proident excepteur et.
                                     Ea nulla nisi aliquip reprehenderit.laborum mollit adipisicing eu ex voluptate.
