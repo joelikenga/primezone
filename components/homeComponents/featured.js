@@ -53,7 +53,7 @@ const featureContent =[
                                                                             {content.tabContents.map((tabCards, index) =>(
 
                                                                                         <Link key={index} href="" className="">
-                                                                                                    <div  className=" scale-95  snap-center snap-mandatory overflow-hidden flex-none shadow max-w-[20rem] bg-white rounded hover:scale-100 hover:duration-300">
+                                                                                                    <div  className=" scale-95 cursor-pointer snap-center snap-mandatory overflow-hidden flex-none shadow max-w-[20rem] bg-white rounded hover:scale-100 hover:duration-300">
                                                                                                    
                                                                                                             <Image 
                                                                                                                 className="object-cover"

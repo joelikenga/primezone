@@ -14,7 +14,7 @@ const Testimonial = () => {
 
     return ( 
             
-                <div className="bg-cover bg-center  bg-no-repeat font-primeFont bg-[url('/wallpaper-2.jpg')]  py-5 z-0">
+                <div className="bg-cover bg-center  bg-no-repeat font-primeFont bg-[url('/testimonial.jpg')]  py-5 z-0">
 
                     {/* <div className="bg-black absolute w-full h-screen text-white z-10">jjhhh</div> */}
 

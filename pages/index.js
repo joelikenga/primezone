@@ -6,7 +6,6 @@ import Testimonial from '../components/homeComponents/testimonial';
 import HomeNav from '../components/homeComponents/homeNav';
 import { useEffect, useState } from 'react';
 import {motion} from "framer-motion";
-import Appbar from '../components/homeComponents/appBar';
 
 const Home = () => {
 

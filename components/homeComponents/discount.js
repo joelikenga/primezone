@@ -15,8 +15,8 @@ const Discount = () => {
         <div className="    overflow-x-visible px-auto py-10   font-primeFont grid grid-cols-1 gap-3  md:grid-cols-3">
 
                 {discountCard.map((items, index) => (
-                                    <Link href={"/"} key={index} className=" cursor-pointer">
-                                            <div className="scale-95    rounded overflow-hidden bordered bg-white scale-95  sm:hover:scale-100 hover:duration-300  shadow">
+                                    <Link href={"/"} key={index} className="">
+                                            <div className="scale-95  cursor-pointer  rounded overflow-hidden bordered bg-white scale-95  sm:hover:scale-100 hover:duration-300  shadow">
                                                 
                                                     <Image className="  object-cover"
                                                             src={items.image}

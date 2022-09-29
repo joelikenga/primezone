@@ -7,6 +7,8 @@ import { useState } from "react";
 const HomeNav = () => {
 
     const [clickApp, SetclickApp] = useState(false);
+    const [clickNav, SetclickNav] = useState(false);
+
 
     const navigation =  [
         {name: "Home", href:"/", title: "Home"},
@@ -25,6 +27,7 @@ const HomeNav = () => {
                  marginLeft:"0px",
                  backgroundColor:"#ff0000"
             },
+
             closed:{
                 width:"0vw", 
                 height:"0vh", 
@@ -35,20 +38,52 @@ const HomeNav = () => {
             }
         }
 
+        const navMenuVariant = {
+
+            open:{opacity:1},
+
+            closed:{
+                borderRadius:"0px",
+                 bottom:"0px",
+                 x:-720,
+                 opacity:0
+
+            }
+        }
+
     return ( 
         <motion.div   initial={{opacity:0}}
         animate={{opacity:1}}
         transition={{delay:0.3, duration:0.5}}>
 
             {/* navbar */}
+            <motion.div
+                    variants={navMenuVariant}
+                    transition={{duration:0.5}}
+                    animate={clickNav ? "open" : "closed"}
+                    className="  font-primeFont  fixed z-50 w-[40vw] h-screen bg-primeRed"
+                    >
+                        <motion.div
+                              className=" flex justify-center mt-14">
+                                    <div 
+                                        onClick={()=>{SetclickNav(!clickNav)}}
+                                        className="cursor-pointer hidden sm:block bg-black text-gray-200 px-4 py-3 font-black text-xl rounded-full text-center">
+                                                <FontAwesomeIcon className=" text-primeRed text-2xl" icon={faTimes} />
+                                                <span className="ml-3">Close</span>
+                                    </div>
+                         </motion.div>
+            </motion.div>
+
         <motion.nav 
         initial={{opacity:0}}
         animate={{opacity:1}}
         transition={{delay:0.3, duration:0.5}}
-        className="flex sm:justify-between justify-center sm:px-64  md:px-32   w-screen  sm:mt-14 mt-8  font-primeFont absolute sm:fixed z-50 ">
+        className="flex sm:justify-between justify-center sm:px-64  md:px-32   w-screen  sm:mt-14 mt-8  font-primeFont absolute sm:fixed z-40 ">
 
                 {/* navigations */}
-                <div className="hidden sm:block bg-black text-gray-200 px-4 py-3 font-black text-xl rounded-full text-center">
+
+               
+                <div onClick={()=>{SetclickNav(!clickNav)}} className="cursor-pointer hidden sm:block bg-black text-gray-200 px-4 py-3 font-black text-xl rounded-full text-center">
                     <FontAwesomeIcon className=" text-primeRed" icon={faBarsStaggered} />
                     <span className="ml-4">Menu</span>
                     </div>
@@ -56,19 +91,19 @@ const HomeNav = () => {
                         
 
                             {/* logo */}
-                     <div className="text-primeRed  font-bold mx-4 text-3xl">
+                     <div className="cursor-pointer text-primeRed  font-bold mx-4 text-3xl">
                           Primezone
                        </div>
 
                 {/* left icons */}
                 <div className="hidden sm:block text-xl  bg-black text-gray-200 py-3 rounded-full">
-                 <FontAwesomeIcon className={"px-5 text-2xl border-r-2 border-primeRed"} icon={faShoppingCart} />
-                 <FontAwesomeIcon className={"px-5 text-2xl"} icon={faUserCircle} />
+                 <FontAwesomeIcon className={"cursor-pointer px-5 text-2xl border-r-2 border-primeRed"} icon={faShoppingCart} />
+                 <FontAwesomeIcon className={"cursor-pointer px-5 text-2xl"} icon={faUserCircle} />
                 </div>
         </motion.nav>
 
         {/* appbar */}
-<motion.div 
+            <motion.div 
                     variants={appMenuVariant}
                     transition={{duration:0.5}}
                     animate={clickApp ? "open" : "closed"}
@@ -78,7 +113,7 @@ const HomeNav = () => {
             onClick={()=>{SetclickApp(!clickApp)}}
             className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4.5rem] h-[4.5rem] container ml-2  rounded-full bottom-10 mx-auto">
 
-                <div className=" flex justify-center container text-center px-6 font-black text-primeRed">
+                <div className=" flex justify-center  text-center px-6 font-black text-primeRed">
 
                         <motion.span 
                         className="font-black text-3xl mt-[1.18rem]">
