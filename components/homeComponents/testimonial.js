@@ -14,16 +14,16 @@ const Testimonial = () => {
 
     return ( 
             
-                <div className="bg-cover bg-center  bg-no-repeat font-primeFont bg-[url('/testimonial.jpg')]  py-5 z-0">
+                <div className="bg-cover bg-center  font-primeFont bg-[url('/testimonial.jpg')]  py-5 z-0">
 
                     {/* <div className="bg-black absolute w-full h-screen text-white z-10">jjhhh</div> */}
 
                         <div className="flex justify-center py-3">
-                            <h2 className="text-3xl sm:text-4xl font-bold uppercase first-letter:text-primeRed first-letter:text-6xl  text-white">Testimonial</h2>
+                            <h2 className="text-3xl sm:text-4xl font-bold  uppercase first-letter:text-primeRed first-letter:text-6xl  text-white">Testimonial</h2>
                         </div>
 
                         <div className="flex justify-center mt-2 container mx-auto">
-                                <h2 className="text-sm sm:text-lg font-bold   text-white text-center">
+                                <h2 className="text-sm sm:text-xl font-bold   text-white text-center">
                                     Eiusmod esse enim velit ullamco dolore aliquip. 
                                     Culpa ex quis laborum amet magna eiusmod proident excepteur et.
                                     Ea nulla nisi aliquip reprehenderit.laborum mollit adipisicing eu ex voluptate.

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import {motion} from "framer-motion";
-
-// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-// import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
+import { FcMultipleDevices,FcMoneyTransfer, FcApproval} from "react-icons/fc";
 
 const Hero = () => {
 
@@ -78,13 +76,24 @@ const Hero = () => {
                                                 initial={{opacity:0}}
                                                 animate={{opacity:1,}}
                                                 transition={{delay:1, duration:1}}
-                                                className= " flex-row text-white font-semibold text-2xl sm:flex sm:justify-between  text-center container mx-auto mt-20  sm:mt-60"
+                                                className= " flex-row text-white font-semibold text-[1.7rem] sm:flex sm:justify-between  px-10 text-center container mx-auto mt-20  sm:mt-60"
                                                 >
-                                                    <div className="my-8"> Discount</div>
-                                                        <div className=" text-xl  bg-black text-gray-200 py-3 rounded-full">
-                                                                 
+                                                    <div className=" justify-center flex my-8">
+                                                        <FcMoneyTransfer  className="text-4xl"/>
+                                                         Discount
+                                                         </div>
+
+                                                         <div>
+                                                        <div className="flex justify-center my-8 ">
+                                                                 <FcMultipleDevices  className=" text-4xl mx-1 "/>
+                                                                 Mobile
                                                         </div>
-                                                    <div className="my-8">Quality</div> 
+
+                                                        </div>
+
+                                                    <div className=" justify-center flex my-8">
+                                                                <FcApproval  className="text-4xl"/> Quality
+                                                        </div> 
                                             </motion.div>
                                     </div>
 
@@ -95,8 +104,8 @@ const Hero = () => {
                         hfhfh
                 </div> */}
 
-                {/*  */}
-
+                {/* sliders */}
+<div className="brightness-50">
 
                             <div   className="flex flex-nowrap gap-5  overflow-hidden">
                                     {heroImages.map((images,index) => {
@@ -163,7 +172,7 @@ const Hero = () => {
                                         )                              
                                     })}
                             </div>
-
+                            </div>
                             {/* <div   className="flex flex-nowrap gap-5  overflow-hidden">
                                     {heroImages.map((images,index) => {
                                         return(
