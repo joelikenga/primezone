@@ -61,7 +61,7 @@ const HomeNav = () => {
                     variants={navMenuVariant}
                     transition={{duration:0.5}}
                     animate={clickNav ? "open" : "closed"}
-                    className="  font-primeFont  fixed z-50 w-[40vw] h-screen bg-primeRed"
+                    className="  font-primeFont  fixed z-50 w-[40vw] h-full bg-primeRed"
                     >
                         <motion.div
                               className=" flex justify-center mt-14">
