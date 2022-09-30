@@ -6,6 +6,7 @@ import Testimonial from '../components/homeComponents/testimonial';
 import HomeNav from '../components/homeComponents/homeNav';
 import { useEffect, useState } from 'react';
 import {motion} from "framer-motion";
+import Advert from '../components/homeComponents/advert';
 
 const Home = () => {
 
@@ -123,6 +124,7 @@ const Home = () => {
                         <Discount />
                         <Featured />
                         <Testimonial />
+                        <Advert />
                 </div>
             }
 

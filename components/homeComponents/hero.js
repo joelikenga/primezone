@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {motion} from "framer-motion";
-import { FcInTransit,FcMoneyTransfer, FcApproval} from "react-icons/fc";
+import { FcInTransit,FcMoneyTransfer, FcSalesPerformance,FcHeadset} from "react-icons/fc";
 
 const Hero = () => {
 
@@ -76,23 +76,23 @@ const Hero = () => {
                                                 initial={{opacity:0}}
                                                 animate={{opacity:1,}}
                                                 transition={{delay:1, duration:1}}
-                                                className= " flex-row text-white font-semibold text-[1.7rem] sm:flex sm:justify-between  px-10 text-center container mx-auto mt-20  sm:mt-60"
+                                                className= " flex-row text-white font-semibold text-xl sm:flex sm:justify-between  px-10 text-center container mx-auto mt-20  sm:mt-60"
                                                 >
                                                     <div className=" justify-center flex my-8">
                                                         <FcMoneyTransfer  className="text-5xl "/>
-                                                         Discount
+                                                         Secure Payment
                                                          </div>
 
                                                          <div>
                                                         <div className="flex justify-center my-8 ">
                                                                  <FcInTransit  className=" text-5xl mx-1 "/>
-                                                                 Delivery
+                                                                 Free Shipping
                                                         </div>
 
                                                         </div>
 
-                                                    <div className=" justify-center flex my-8">
-                                                                <FcApproval  className="text-5xl"/> Quality
+                                                        <div className=" justify-center flex my-8">
+                                                                <FcHeadset  className="text-5xl"/> Online Support 24/7
                                                         </div> 
                                             </motion.div>
                                     </div>
