@@ -61,7 +61,7 @@ const HomeNav = () => {
                     variants={navMenuVariant}
                     transition={{duration:0.5}}
                     animate={clickNav ? "open" : "closed"}
-                    className="  font-primeFont  fixed z-50 w-[40vw] h-full bg-primeRed"
+                    className=" hidden sm:block font-primeFont  fixed z-50 w-[40vw] h-full bg-primeRed"
                     >
                         <motion.div
                               className=" flex justify-center mt-14">
@@ -72,6 +72,14 @@ const HomeNav = () => {
                                                 <span className="ml-3">Close</span>
                                     </div>
                          </motion.div>
+                         {/* nav contents */}
+                         <div > 
+                                {navigation.map((navs,index) => (
+                                    <div key={index} className=" flex justify-center my-10 text-2xl font-bold">
+                                            <p>{navs.name}</p>
+                                    </div>
+                                ))}
+                         </div>
             </motion.div>
 
         <motion.nav 
@@ -107,18 +115,27 @@ const HomeNav = () => {
                     variants={appMenuVariant}
                     transition={{duration:0.5}}
                     animate={clickApp ? "open" : "closed"}
-                    className="sm:hidden  fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container  rounded-full bottom-10 mx-auto">
-
+                    className="sm:hidden   fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container  rounded-full bottom-10 mx-auto">
+                                    {/* app content */}
+                                    <div className="pt-5"> 
+                                {navigation.map((navs,index) => (
+                                    <div key={index} className=" flex justify-center my-10 text-2xl font-bold">
+                                            <p>{navs.name}</p>
+                                    </div>
+                                ))}
+                         </div>
             <footer 
             onClick={()=>{SetclickApp(!clickApp)}}
             className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4.5rem] h-[4.5rem] container ml-2  rounded-full bottom-10 mx-auto">
 
-                <div className=" flex justify-center  text-center px-6 font-black text-primeRed">
+                <div className="  flex justify-center  text-center px-6 font-black text-primeRed">
 
                         <motion.span 
                         className="font-black text-3xl mt-[1.18rem]">
                                <FontAwesomeIcon className=" text-primeRed" icon={clickApp ? faTimes : faEquals} />
                          </motion.span>
+
+
 
                 </div>
 
