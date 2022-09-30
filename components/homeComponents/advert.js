@@ -11,10 +11,10 @@ const Advert = () => {
 
     return ( 
         <>
-                <div className="text-primeFont px-4 py-8 ">
+                <div className="font-primeFont px-4 py-8 ">
 
                 <div className="flex over justify-center item-center ">
-                              <h2 className="uppercase text-xl sm:text-3xl font-bold px-3 text-black border-x-4 sm:border-x-8 border-primeRed mb-5">Flash Sales    </h2>
+                              <h2 className="uppercase text-xl sm:text-3xl font-bold px-3  border-x-4 sm:border-x-8 border-primeRed mb-5">Flash Sales </h2>
                         </div>
 
                         <div className="grid grid-cols- gap-4 rounded-2xl overflow-hidden sm:grid-cols-3">

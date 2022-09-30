@@ -7,6 +7,7 @@ import HomeNav from '../components/homeComponents/homeNav';
 import { useEffect, useState } from 'react';
 import {motion} from "framer-motion";
 import Advert from '../components/homeComponents/advert';
+import Footer from '../components/homeComponents/footer';
 
 const Home = () => {
 
@@ -125,6 +126,7 @@ const Home = () => {
                         <Featured />
                         <Testimonial />
                         <Advert />
+                        <Footer />
                 </div>
             }
 
