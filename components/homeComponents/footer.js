@@ -35,7 +35,7 @@ const Footer = () => {
                 <div className="flex  justify-end mt-[12rem] ">
 
                             <div className="capitalize text-lg text-white  ">
-                                        <p>made with 🤍 by #<strong className="text-primeRed">joelikenga</strong>🇳🇬</p>
+                                        <p>made with 🤍 by #<strong className="text-primeRed">joelikenga</strong> 🇳🇬</p>
                             </div>
                 </div>
 
