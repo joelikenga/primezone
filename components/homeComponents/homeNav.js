@@ -117,10 +117,12 @@ const HomeNav = () => {
                     animate={clickApp ? "open" : "closed"}
                     className="sm:hidden   fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container  rounded-full bottom-10 mx-auto">
                                     {/* app content */}
-                                    <div className="pt-5"> 
+
+                                    <div className="mt-32 overflow-y-scroll"> 
                                 {navigation.map((navs,index) => (
                                     <div key={index} className=" flex justify-center my-10 text-2xl font-bold">
                                             <p>{navs.name}</p>
+                                            
                                     </div>
                                 ))}
                          </div>
