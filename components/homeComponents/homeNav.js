@@ -25,7 +25,7 @@ const HomeNav = () => {
                 borderRadius:"0px",
                  bottom:"0px",
                  marginLeft:"0px",
-                 backgroundColor:"#ff0000"
+                 backgroundColor:"#141516"
             },
 
             closed:{
@@ -40,7 +40,10 @@ const HomeNav = () => {
 
         const navMenuVariant = {
 
-            open:{opacity:1},
+            open:{
+                opacity:1,
+                backgroundColor:"#141516"
+            },
 
             closed:{
                 borderRadius:"0px",
@@ -61,7 +64,7 @@ const HomeNav = () => {
                     variants={navMenuVariant}
                     transition={{duration:0.5}}
                     animate={clickNav ? "open" : "closed"}
-                    className=" font-primeFont  fixed z-50 w-[40vw] h-full bg-primeRed"
+                    className=" font-primeFont  fixed z-50 w-[40vw] h-full "
                     >
                         <motion.div
                               className=" flex justify-center mt-14">
@@ -75,7 +78,7 @@ const HomeNav = () => {
                          {/* nav contents */}
                          <div > 
                                 {navigation.map((navs,index) => (
-                                    <div key={index} className=" flex justify-center my-10 text-2xl font-bold">
+                                    <div key={index} className=" flex justify-center my-10 text-2xl font-bold text-white">
                                             <p>{navs.name}</p>
                                     </div>
                                 ))}
@@ -117,10 +120,12 @@ const HomeNav = () => {
                     animate={clickApp ? "open" : "closed"}
                     className="sm:hidden   fixed z-40  b-10 bg-transperent h-10  w-[2rem] h-[2rem] container  rounded-full bottom-10 mx-auto">
                                     {/* app content */}
-
-                                    <div className="mt-32 overflow-y-scroll"> 
+                                    <div className="cursor-pointer text-primeRed  font-bold mx-4 text-3xl mt-10 text-center">
+                                              Primezone
+                                    </div>
+                                    <div className="mt-20 overflow-y-scroll"> 
                                 {navigation.map((navs,index) => (
-                                    <div key={index} className=" flex justify-center my-10 text-2xl font-bold">
+                                    <div key={index} className=" flex justify-center my-10 text-2xl font-bold text-white">
                                             <p>{navs.name}</p>
                                             
                                     </div>
@@ -130,7 +135,7 @@ const HomeNav = () => {
             onClick={()=>{SetclickApp(!clickApp)}}
             className="sm:hidden  fixed z-40  b-10 bg-[rgba(0,0,0,1)] h-10  w-[4.5rem] h-[4.5rem] container ml-2  rounded-full bottom-10 mx-auto">
 
-                <div className="  flex justify-center  text-center px-6 font-black text-primeRed">
+                <div className="  flex justify-center  text-center px-6 font-black text-primeDark">
 
                         <motion.span 
                         className="font-black text-3xl mt-[1.18rem]">
