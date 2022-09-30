@@ -32,7 +32,7 @@ const Footer = () => {
 
                     </div>
 
-                <div className="flex  justify-end mt-[12rem] ">
+                <div className="flex  justify-end mt-[8rem] ">
 
                             <div className="capitalize text-lg text-white  ">
                                         <p>made with 🤍 by #<strong className="text-primeRed">joelikenga</strong> 🇳🇬</p>
