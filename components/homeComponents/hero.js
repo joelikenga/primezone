@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {motion} from "framer-motion";
-import { FcMultipleDevices,FcMoneyTransfer, FcApproval} from "react-icons/fc";
+import { FcInTransit,FcMoneyTransfer, FcApproval} from "react-icons/fc";
 
 const Hero = () => {
 
@@ -79,20 +79,20 @@ const Hero = () => {
                                                 className= " flex-row text-white font-semibold text-[1.7rem] sm:flex sm:justify-between  px-10 text-center container mx-auto mt-20  sm:mt-60"
                                                 >
                                                     <div className=" justify-center flex my-8">
-                                                        <FcMoneyTransfer  className="text-4xl"/>
+                                                        <FcMoneyTransfer  className="text-5xl "/>
                                                          Discount
                                                          </div>
 
                                                          <div>
                                                         <div className="flex justify-center my-8 ">
-                                                                 <FcMultipleDevices  className=" text-4xl mx-1 "/>
-                                                                 Mobile
+                                                                 <FcInTransit  className=" text-5xl mx-1 "/>
+                                                                 Delivery
                                                         </div>
 
                                                         </div>
 
                                                     <div className=" justify-center flex my-8">
-                                                                <FcApproval  className="text-4xl"/> Quality
+                                                                <FcApproval  className="text-5xl"/> Quality
                                                         </div> 
                                             </motion.div>
                                     </div>
